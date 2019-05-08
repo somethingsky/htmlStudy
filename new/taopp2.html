@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/testStyle2.css"/>
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+<div>
+<div class="abc">
+    <video src="image/video1.mp4" autoplay controls></video>
+</div>
+<div class="pic">
+    <form action="" class="">
+    弹幕内容：<input type="text"placeholder="在此处输入弹幕内容" required class="write" />
+    <div class="danmukuang">
+        <input type="button" value="发送弹幕" class="send"/>
+    </div>
+    </form>
+</div>
+</div>
+<script>
+
+    var yanse=["red","yellow","green","blue"]
+    $(".send").click(function(){
+        var index=Math.floor(Math.random()*yanse.length);
+        var neirong=$(".write").val();
+
+        var vedioWidth=$(".abc").width();
+
+        var danHeight=Math.random()*$(".abc").height()*0.7;
+      
+        $("<span class='danmu'></span>").text(neirong).css("left",vedioWidth).css("top",danHeight).css("color",yanse[index])
+                .css("width",neirong.length*20).animate({left:-(neirong.length*20)},3000,function(){
+
+            $(this).remove();
+
+        }).appendTo(".abc");
+        //发送完弹幕内容为空
+        $(".write").val("");
+
+    })
+
+
+    $(".write").keyup(function(e){
+        //如果按下的码值是13
+        if(e.keyCode==13){
+            //触发发送弹幕的点击事件
+            $(".send").click();
+        }
+    })
+</script>
+
+
+
+
+
+
+<div class="jianjie">
+    <div class="jian1">
+        <span class="ming"><b>西虹市首富</b> <br/></span>
+        Hello Mr.Billionaire <br/>
+        喜剧<br>
+        中国大陆|118分钟<br>
+       2018-07-27 08:00 大陆上映<br>
+    </div>
+    <div class="jian2"><img src="image/apic1.jpg" alt="" class="pic"></div>
+</div>
+<div class="pinjia">
+    <div class="pin1">
+        <span class="text"> <b>9.1</b>
+            <img src="image/d星星.png" alt="" class="xing"/>
+            <img src="image/d星星.png" alt="" class="xing"/>
+            <img src="image/d星星.png" alt="" class="xing"/>
+            <img src="image/d星星.png" alt="" class="xing"/>
+            <img src="image/d星星.png" alt="" class="xing"/></span> <br/>
+        评分16823人
+    </div>
+    <div class="pin2">
+        <div class="pin3">
+            <span class="text"> <b>63%</b></span> <br/>
+            推荐指数
+        </div>
+        <div class="pin4">
+            <span class="text"><b>2351982</b></span> <br/>
+            想看人数
+        </div>
+    </div>
+</div>
+<div class="tip1">想看 </div>
+<div class="tip2">看过 </div>
+<div class="ren">
+    <b> 演职人员:</b><br/>
+</div>
+<span class="yanyuan">
+<img src="image/s4.png" alt=""/>
+<img src="image/s2.png" alt=""/>
+<img src="image/s3.png" alt=""/>
+<img src="image/s1.png" alt=""/>
+</span>
+<footer>
+     <a class="xuanzuoL" href="taopp4.html">选座购票</a>
+</footer>
+</body>
+</html>

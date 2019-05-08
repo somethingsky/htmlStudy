@@ -1,0 +1,61 @@
+@charset"UTF-8";
+body{
+    /*背景图片*/
+    background-image:url(../pic/bizhi1.jpg);
+    /*去除重复*/
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+.buju{
+    width: 680px;
+    height: 580px;
+    /*background-color: bisque;*/
+    margin: 100px auto;
+}
+.p1,.p2,.p3,.p4,.p5,.p6,.p7,.p8,.p9{
+    width: 200px;
+    height: 200px;
+    /*background-color: red;*/
+    float: left;
+    border: 1px solid lightsteelblue;
+    position: relative;
+    /*搭建3d环境*/
+    transform-style:preserve-3d ;
+    /*景深*/
+    perspective: 500px;
+
+}
+.fan,.zheng{
+    width: 180px;
+    height: 180px;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: absolute;
+}
+.fan{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.p1Img,.p2Img,.p3Img,.p4Img,.p5Img,.p6Img,.p7Img,.p8Img,.p9Img{
+    width: 180px;
+    height: 180px;
+
+}
+.p1Img1{
+    width: 180px;
+    height: 180px;
+
+}
+.p1:hover,.p2:hover,.p3:hover,.p4:hover,.p5:hover,.p6:hover,.p7:hover,.p8:hover,.p9:hover{
+    transform: rotateY(180deg);
+    /*过渡*/
+    transition: 2s;
+    /*阴影:阴影在横轴上大小 纵轴大小 阴影模糊程度 颜色*/
+    box-shadow: 10px 5px 20px black;
+}
+.text{
+    font-size: 100px;
+    color: #FF3664;
+}

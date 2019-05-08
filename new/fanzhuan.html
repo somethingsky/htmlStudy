@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>翻转照片墙</title>
+    <link rel="stylesheet" href="css/qianglianjie.css"/>
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+<audio src="music/BFAD灬因为有你 - BFAD-Für immer.mp3" autoplay loop controls></audio>
+<center><span class="text">照片墙</span></center>
+<div class="buju">
+    <div class="p1">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi2.jpg" alt="" class="p1Img"/>
+        </div>
+    </div>
+
+    <div class="p2">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi3.jpg" alt="" class="p2Img"/>
+        </div>
+    </div>
+
+    <div class="p3">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi4.jpg" alt="" class="p3Img"/>
+        </div>
+    </div>
+
+    <div class="p4">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi5.jpg" alt="" class="p4Img"/>
+        </div>
+    </div>
+
+    <div class="p5">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi6.jpg" alt="" class="p5Img"/>
+        </div>
+    </div>
+
+    <div class="p6">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi8.jpg" alt="" class="p6Img"/>
+        </div>
+    </div>
+
+    <div class="p7">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi9.jpg" alt="" class="p7Img"/>
+        </div>
+    </div>
+
+    <div class="p8">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi10.jpg" alt="" class="p8Img"/>
+        </div>
+    </div>
+
+    <div class="p9">
+        <div class="zheng">
+            <img src="pic/bizhi7.jpg" alt="" class="p1Img1"/>
+        </div>
+        <div class="fan">
+        <img src="pic/bizhi11.jpg" alt="" class="p9Img"/>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    var imgAddress=["pic/bizhi2.jpg","pic/bizhi3.jpg","pic/bizhi4.jpg","pic/bizhi5.jpg","pic/bizhi6.jpg","pic/bizhi8.jpg","pic/bizhi9.jpg","pic/bizhi10.jpg","pic/bizhi11.jpg"];
+
+    setInterval(function(){
+    for(var i=0;i< $(".fan").length;i++){
+
+        var index=Math.floor(Math.random()*imgAddress.length);
+        $(".p9Img,.p8Img,.p7Img,.p5Img,.p4Img,.p3Img,.p2Img,.p1Img").eq(i).attr("src",imgAddress[Math.floor(Math.random()*imgAddress.length)])
+
+    }
+    },6000)
+    $(".p1,.p2,.p3,.p4,.p5,.p6,.p7,.p8,.p9").mouseenter(function(){
+
+        $(".").append("<audio src='music/BFAD灬因为有你 - BFAD-Für immer.mp3' autoplay></audio>")
+    }).mouseleave(function(){
+
+        $(".").empty();
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>淘票票</title>
+    <link rel="stylesheet" href="css/testStyle.css"/>
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+<header>
+    <!--放图片-->
+    <div class="pic">
+        <img src="image/logo.png"alt="">
+    </div>
+    <nav>
+        <ul>
+            <li class="mess1">正在热映</li>
+            <li class="mess2">即将放映</li>
+        </ul>
+    </nav>
+</header>
+<ul class="banner">
+
+    <li class="pic1" id="first"><img src="image/l俏公主.png" alt="" class="bannerImg" alt=""/></li>
+    <li class="pic1"><img src="image/lpic1.jpg" alt="" class="bannerImg" alt=""/></li>
+    <li class="pic1"><img src="image/l你好，之华.jpg" alt="" class="bannerImg" alt=""/></li>
+    <li class="pic1"><img src="image/l毒液.jpg" alt="" class="bannerImg" alt=""/></li>
+    <li class="pic1"><img src="image/a无名之辈.jpg" alt="" class="bannerImg" alt=""/></li>
+
+</ul>
+<span class="Left">&lt;</span>
+<span class="Right">&gt;</span>
+<div class="point"></div>
+    <script>
+/*pic1下标索引值 初始为0*/
+    var count=0;
+    var  timeid;
+    $(".Right").click(function(){
+        clearInterval(timeid);
+        count++;
+        if(count==$(".pic1").length){
+            count=0;
+        }
+        $(".pic1").eq(count).stop().fadeIn().siblings().stop().fadeOut();
+        $(".eachPoint").eq(count).css("opacity","1").siblings().css("opacity","0.2");
+
+    })
+	$(".Left").click(function(){
+    	count--;
+    if(count==-$(".pic1").length){
+        count=0;
+    }
+    /*stop()停止轮播动画队列*/
+    $(".pic1").eq(count).stop().fadeIn().siblings().stop().fadeOut();
+    $(".eachPoint").eq(count).css("opacity","1").siblings().css("opacity","0.2");
+	})
+        /*自动轮播*/
+        timeid=setInterval(function(){
+            count++;
+            if(count==$(".pic1").length){
+                count=0;
+            }
+            $(".pic1").eq(count).stop().fadeIn().siblings().stop().fadeOut();
+            $(".eachPoint").eq(count).css("opacity","1").siblings().css("opacity","0.2");
+        },2000)
+		/*hover的两个参数  第一个是鼠标进入执行的内容   第二个是  鼠标出去执行的内容*/
+        $(".pic1,.Right,.Left").hover(function(){
+            clearInterval(timeid);
+        },function(){
+            timeid=setInterval(function(){
+                count++;
+                if(count==$(".pic1").length){
+                    count=0;
+                }
+                $(".pic1").eq(count).stop().fadeIn().siblings().stop().fadeOut();
+                $(".eachPoint").eq(count).css("opacity","1").siblings().css("opacity","0.2");
+
+            },2000)
+        })
+
+        for(var i=0;i<$(".pic1").length;i++){
+            /*创建节点*/
+            $("<span class='eachPoint'></span>").appendTo(".point")
+        }
+        $(".banner,.Right,.Left").hover(function(){
+        $(".Right,.Left").css("visibility","visible");
+        },function(){
+        $(".Right,.Left").css("visibility","hidden");
+        })
+
+</script>
+
+
+
+
+
+
+<div class="center">
+    <!--里面写的是 各个电影信息-->
+     <div class="movie">
+         <div class="top">
+             <div class="left">
+                 <img src="image/apic1.jpg" alt="" class="leftImg"/>
+             </div>
+             <div class="tip">
+                 <img src="image/c一周最热.png" alt="" class="tipPic"/>
+             </div>
+             <div class="right">
+                 <div class="text">
+                        <span class="biaoti">
+                           <a class="payL" href="taopp2.html"> 西虹市首富</a>
+                        </span><br/>
+                     <span class="role">观众评分
+                     <span class="pinfen">
+                           9.1
+                        </span><br/>
+                         导演:闫菲 彭大魔<br>
+                         主演:沈腾 宋芸桦 张<br>
+                         一鸣 常远
+                     </span>
+                 </div>
+                 <div class="pay">
+
+                     <a class="payL" href="taopp2.html">购票</a>
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <div class="last">
+                 <span class="yingping">专访</span>
+                | 宋芸桦：我和沈腾cp感
+             </div>
+         </div>
+     </div>
+</div>
+
+
+
+
+
+
+
+<div class="center">
+    <!--里面写的是 各个电影信息-->
+     <div class="movie">
+         <div class="top">
+             <div class="left">
+                 <img src="image/a你好，之华.jpg" alt="" class="leftImg"/>
+             </div>
+             <div class="tip">
+                 <img src="image/c今日最热.png" alt="" class="tipPic"/>
+             </div>
+             <div class="right">
+                 <div class="text">
+                        <span class="biaoti">
+                            你好，之华
+                        </span><br/>
+                     <span class="role">观众评分
+                     <span class="pinfen">
+                          7.7
+                        </span><br/>
+                         导演:弗兰克·盖思堂<br>
+                         里德<br>
+                         主演:弗兰克·盖思堂<br>
+                         里德<br>
+                     </span>
+                 </div>
+                 <div class="pay">
+                  购票
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <div class="last">
+                 <span class="yingping">独家视频</span>
+                |爆笑司机四轮警车两
+             </div>
+         </div>
+     </div>
+</div>
+<div class="center">
+    <!--里面写的是 各个电影信息-->
+     <div class="movie">
+         <div class="top">
+             <div class="left">
+                 <img src="image/a两个俏公主.jpg" alt="" class="leftImg"/>
+             </div>
+             <div class="tip">
+                 <img src="image/c一周最热.png" alt="" class="tipPic"/>
+             </div>
+             <div class="right">
+                 <div class="text">
+                        <span class="biaoti">
+                            两个俏公主
+                        </span><br/>
+                     <span class="role">观众评分
+                     <span class="pinfen">
+                        8.2
+                        </span><br/>
+                         导演:徐克<br>
+                         里德<br>
+                         主演:赵又廷 冯绍峰<br>
+                         林更新<br>
+                     </span>
+                 </div>
+                 <div class="pay">
+                  购票
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <div class="last">
+                 <span class="yingping">影评</span>
+                |能超越他的只有他自己
+             </div>
+         </div>
+     </div>
+</div>
+<div class="center">
+    <!--里面写的是 各个电影信息-->
+     <div class="movie">
+         <div class="top">
+             <div class="left">
+                 <img src="image/a无名之辈.jpg" alt="" class="leftImg"/>
+             </div>
+
+             <div class="right">
+                 <div class="text">
+                        <span class="biaoti">
+                            无名之辈
+                        </span><br/>
+                     <span class="role">观众评分
+                     <span class="pinfen">
+                        8.6
+                        </span><br/>
+                         导演:是枝裕和<br>
+                         里德<br>
+                         主演:中川雅也 安藤<br>
+                         樱 松冈莱优<br>
+                     </span>
+                 </div>
+                 <div class="pay">
+                  购票
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <div class="last">
+                 <span class="yingping">催泪</span>
+                |她贡献了年度最佳哭戏片
+             </div>
+         </div>
+     </div>
+</div>
+
+<div class="center">
+    <!--里面写的是 各个电影信息-->
+     <div class="movie">
+         <div class="top">
+             <div class="left">
+                 <img src="image/a毒液.jpg" alt="" class="leftImg"/>
+             </div>
+
+             <div class="right">
+                 <div class="text">
+                        <span class="biaoti">
+                            毒液
+                        </span><br/>
+                     <span class="role">观众评分
+                     <span class="pinfen">
+                        9.0
+                        </span><br/>
+                         导演:刘阔<br>
+                         里德<br>
+                         主演:路知行 闫萌萌<br>
+                        褚君 边江<br>
+                     </span>
+                 </div>
+                 <div class="pay">
+                  购票
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <div class="last">
+                 <span class="yingping">测评</span>
+                |又见中国动画精品
+             </div>
+         </div>
+     </div>
+</div>
+
+
+</body>
+
+<footer>
+     <div class="k1">
+         <img src="image/c1.png" alt="" class="k11"/><br/>
+         电影
+     </div>
+     <div class="k2">
+         <img src="image/c2.png" alt="" class="k22"/><br/>
+         影院
+     </div>
+     <div class="k3">
+         <img src="image/c3.png" alt="" class="k33"/><br/>
+         我的
+     </div>
+</footer>
+
+
+
+
+</html>

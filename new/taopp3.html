@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/taopp3.css"/>
+    <!--引入jquery文件-->
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+
+
+    <div class="movietext">
+        <div class="text">西虹市首富</div><br/>
+        今天08-05 10:20 (国语2D）
+    </div>
+    <div class="moviepic">
+        <img src="image/apic1.jpg" alt="" class="pic"/>
+    </div>
+
+    <div class="text1">
+        <div class="text11">
+        <div class="space"></div>
+        可选
+        <img src="image/tlogo.png" alt="" class="space1"/>
+        已售
+        </div>
+
+    </div>
+    <div class=" yingting">
+    <div class="place">
+        5号厅
+    </div>
+        <div class="weizhi">
+            <span>1-1</span> <span>1-2</span> <span>1-3</span> <span>1-4</span> <span>1-5</span> <span>1-6</span> <span>1-7</span> <span>1-8</span>
+            <span>1-9</span> <span>1-10</span> <br/><br/>
+            <span>2-1</span> <span>2-2</span> <span>2-3</span> <span>2-4</span> <span>2-5</span> <span>2-6</span> <span>2-7</span> <span>2-8</span> <br/><br/>
+            <span>3-1</span> <span>3-2</span> <span>3-3</span> <span>3-4</span> <span>3-5</span> <span>3-6</span> <span>3-7</span> <span>3-8</span> <br/><br/>
+            <span>4-1</span> <span>4-2</span> <span>4-3</span> <span>4-4</span> <span>4-5</span> <span>4-6</span> <span>4-7</span> <span>4-8</span>
+            <span>4-9</span> <span>4-10</span> <br/><br/>
+            <span>5-1</span> <span>5-2</span> <span>5-3</span> <span>5-4</span> <span>5-5</span> <span>5-6</span> <span>5-7</span> <span>5-8</span>
+        </div>
+
+        </div>
+    </div>
+    <div class="xuanzuo">
+        欢迎选座
+    </div>
+<div class="pay">
+    请先购买
+</div>
+
+
+
+
+    <script>
+
+        /*第二步 入口函数*/
+        $(function () {
+            var count=0;
+            var a=23;
+            var b;
+            $(".weizhi span").click(function(){
+                var image= $(this).css("background-image");
+                if(image=="none"){
+                    $(this).css("background-image","url('image/logo.png')").css("background-size","35px 20px");
+                    count++;
+                     b=a*count;
+                    $(".pay").text("已选"+count+"张票"+"，请支付"+b+"元");
+
+                }else{
+                    $(this).css("background-image","none");
+                    count--;
+                    b=a*count;
+
+                    $(".pay").text("已选"+count+"张票"+"，请支付"+b+"元");
+                    if(count==0){
+                        $(".pay").text("请先选座");
+                    }
+                }
+            });
+
+
+        })
+    </script>
+
+
+
+</body>
+</html>

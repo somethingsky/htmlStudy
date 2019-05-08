@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.abc{
+    width: 100%;
+    height:200px;
+    background-color: blue;
+    position: relative;
+}
+video{
+    width: 100%;
+    height:200px;
+}
+.pic{
+    width: 100%;
+    height: 70px;
+
+
+}
+
+
+
+.danmukuang{
+    width: 100%;
+    height: 45px;
+    background-color: green;
+    border-radius:40px;
+   text-align: center;
+
+}
+.send{
+
+    font-size: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius:40px;
+    background-color: green;
+    color: aliceblue;
+    font-style: oblique;
+}
+.danmu{
+    display: inline-block;
+    position: absolute;
+
+}
+
+
+
+
+.jianjie{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+
+    background-color:orange;
+
+}
+.text {
+    font-size: 17px;  /*行高*/
+    color: #222222;
+}
+.ming{
+    font-size: 20px;
+}
+.jian1{
+    width: 60%;
+    height: 150px;
+    /*
+    background-color: cadetblue;
+    */
+    float: left;
+    font-size: 14px;  /*行高*/
+    line-height: 30px;
+    text-align: center;
+}
+.jian2{
+    width: 32%;
+    height: 130px;
+    margin: 10px 10px;
+    /*
+    background-color: darkgreen;
+    */
+    float: right;
+}
+.pic {
+    width: 100%;
+    height: 100%;
+}
+.pinjia{
+    width: 100%;
+    height: 50px;
+    /*
+    background-color: red;
+    */
+    font-size: 14px;  /*行高*/
+    margin-top: 10px;
+    color: gray;
+    margin-left: 10px;
+
+}
+.pin1{
+    width: 40%;
+    height: 50px;
+    /*
+    background-color: #4fffd6;
+    */
+    float: left;
+}
+.xing{
+    width: 10px;
+    height: 10px;
+}
+.pin2{
+    width: 60%;
+    height: 50px;
+    /*
+    background-color: #64ff36;
+    */
+    float: right;
+}
+.pin3{
+    width: 50%;
+    height: 50px;
+    /*
+    background-color: #ffc857;
+    */
+    float: left;
+}
+.pin4{
+    width: 50%;
+    height: 50px;
+    /*
+    background-color: #ff56f1;
+    */
+    float: right;
+}
+.tip1{
+    width: 40%;
+    height: 20px;
+    border-radius:10px;
+    float: left;
+    background-color: cadetblue;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 20px;
+}
+.tip2{
+    width: 40%;
+    height: 20px;
+    border-radius:10px;
+    float: right;
+    background-color: cadetblue;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 20px;
+}
+.ren{
+    clear: both;
+    width: 40%;
+    height: 30px;
+}
+.yanyuan{
+    width:98%;
+    height: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+img{
+width: 23%;
+    height: 100px;
+}
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: #ff3664;
+    clear: both;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+.xuanzuoL{
+    text-decoration: none;
+}
